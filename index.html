@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CECYTEM - Sistema de Control Escolar</title>
+    <link rel="icon" href="deo-logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <!-- Encabezado -->
+    <div class="header">
+        <img src="logo.png" alt="CECYTEM Logo">
+        <div class="header-text">
+            <h1>Colegio de Estudios Científicos y Tecnológicos del Estado de México</h1>
+            <div class="divider"></div>
+            <p>Sistema de Control Escolar WEB (DEO Rev. 571) || 2024-2025</p>
+        </div>
+        <img src="logoGob.png" alt="Logo del Gobierno" class="header-logo-gob"> <!-- Logo del Gobierno -->
+        <div class="red-bar"></div>
+        <div class="cyan-bar"></div>
+    </div>
+    
+    
+    <!-- Contenedor del formulario de inicio de sesión -->
+    <div class="container">
+        <div class="login-header">
+            <img src="deo-logo.png" alt="DEO Logo">
+            <span>DEO</span>
+        </div>
+        <form action="#" method="POST">
+            <div class="form-group" style="margin-top: 20px;">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <!-- Cambiar por capcha real -->
+            <div class="checkbox-group"> 
+                <input type="checkbox" id="captcha" name="captcha" required>
+                <label for="captcha">Soy humano</label>
+            </div>
+            <button type="submit" class="btn-submit">Iniciar Sesión</button>
+        </form>
+        <div class="footer">
+            <p>&copy; 2024 Colegio de Estudios Científicos y Tecnológicos del Estado de México</p>
+        </div>
+    </div>
+       <!-- Pie de página -->
+<div id="pleca" style="position:relative;text-align:center;left:0px;height:280px;z-index:6;width:100%;" title="">
+    <!-- Fondo gris claro antes de la franja gris oscura -->
+<div style="width: 100%; height: 250px; background-color: #f1f1f1; position: absolute; top: 10%; z-index: -1; border-top: 2px solid rgba(200, 200, 200, 1); box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);">
+    <!-- Espacio reservado para el logo en el centro -->
+    <div id="wb_logo_GOB" style="position:absolute;left:50%;top:-5%;transform:translate(-50%, -50%);width:7%;height:31%;z-index:1;padding:0;">
+        <img src="logoGobFooter.png" id="logo_GOB" alt="Logo del Gobierno" border="0">
+    </div>    
+</div>
+    <div class="thin-line"></div> <!-- Línea delgada arriba de la franja gris -->
+    <div id="subFooterLink" style="position:relative;left:7%;top:91%;width:87%;height:5%;text-align:center;z-index:0;">    
+        <span style="color:#000000;font-family:'gotham book';font-size:13px;">
+            Algunos Derechos Reservados 2014 CECyTEM | 
+            <a href="https://cecytem.mx/deo/rsc/pdf/Aviso_de_Privacidad.pdf" target="_blank" class="Normal" style="color: #000000;">Aviso de Privacidad</a>
+        </span>
+        <br>                
+    </div> 
+    <div id="footerLinksCenter" style="position:absolute;text-align:center;top:30%;width:100%;height:32%;z-index:4;">
+        <span style="color:#da001b;font-family:'gotham book';font-size:13px;"><strong>CECyTEM -- Unidad de Informática -- Área de Sistemas de la Información</strong></span>
+        <span style="color:#282828;font-family:'gotham book';font-size:13px;">
+            <strong><br></strong>
+            <br>TRANSFORMANDO IDEAS EN REALIDAD :)
+            <br>Soporte Técnico: (722) 275-80-40 Ext. 2103, 2101, 1115 y 1117
+        </span>
+        <span style="color:#000000;font-family:'gotham book';font-size:9px;"><br>Para un óptimo funcionamiento se recomienda una resolución de 1280 x 1024, Chrome 30, Firefox 30 o superior.</span>
+    </div>
+    <div id="grisFooter" style="height: 20%; top: 65%;">
+        <span>
+            <strong>
+                <a class="footer" href="http://cecytem.edomex.gob.mx/" target="_blank" style="color: white; text-decoration: underline; font-size: 16px; transition: color 0.3s ease, text-shadow 0.3s ease;">Página Oficial CECyTEM</a>
+            </strong>
+        </span>
+    </div>
+        
+        
+<!-- Botón de desplazamiento -->
+<button class="scroll-button" onclick="toggleScroll()">
+    <img id="arrow" src="arrow-down.png" alt="Flecha hacia abajo">
+</button> 
+<!-- Coloca el script aquí -->
+<script>
+    // Deshabilitar el clic derecho
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script>
+       
+<script>
+    function scrollToBottom() {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    }
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    function toggleScroll() {
+        const footer = document.getElementById('pleca'); // Asegúrate de que el ID coincida con tu pie de página
+        const footerTop = footer.getBoundingClientRect().top; // Posición del pie de página
+        const arrow = document.getElementById('arrow');
+
+        // Si el pie de página es visible, subir
+        if (footerTop < window.innerHeight) {
+            scrollToTop();
+            arrow.src = "arrow-up.png"; // Cambia a la flecha hacia arriba
+        } else {
+            scrollToBottom(); // Si no, bajar
+            arrow.src = "arrow-down.png"; // Cambia a la flecha hacia abajo
+        }
+    }
+
+    // Ajustar la posición del botón al final de la página
+    window.onscroll = function() {
+        const scrollButton = document.querySelector('.scroll-button');
+        const footer = document.getElementById('pleca'); // Asegúrate de que el ID coincida con tu pie de página
+        const footerTop = footer.getBoundingClientRect().top; // Posición del pie de página
+
+        // Cuando el pie de página esté visible
+        if (footerTop < window.innerHeight) {
+            const buttonCenterX = (window.innerWidth / 2) - 30; // Ajustar a 30px para centrar más el botón
+            scrollButton.style.left = buttonCenterX + 'px'; // Mueve el botón al centro
+            document.getElementById('arrow').src = "arrow-up.png"; // Cambia a la flecha hacia arriba
+        } else {
+            scrollButton.style.left = '20px'; // Vuelve a la esquina inferior izquierda
+            document.getElementById('arrow').src = "arrow-down.png"; // Vuelve a la flecha hacia abajo
+        }
+    };
+</script>
+    </div>
+</body>
+</html>

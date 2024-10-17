@@ -1,0 +1,303 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Encabezado con fondo blanco */
+.header {
+    background-color: #ffffff;
+    color: #333;
+    width: 100%;
+    padding: 40px 20px 20px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* Franja gris con sombra para simular relieve */
+.header::before {
+    content: "";
+    width: 100%;
+    height: 70px;
+    background-color: #333333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* Franja roja debajo de la gris */
+.red-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #C00000;
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+
+.header img {
+    height: 80px;
+    margin-top: 40px;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    z-index: 1;
+}
+
+.header-text h1 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.header-text p {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: red;
+}
+
+/* Franja gris delgada con desvanecido */
+.divider {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #ccc, rgba(204, 204, 204, 0));
+    margin: 5px 0;
+}
+
+/* Franja cian decorativa al final del encabezado */
+.cyan-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #74ebd5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Contenedor del formulario */
+.container {
+background-color: #f9f9f9;
+border-radius: 10px;
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+width: 90%;
+max-width: 320px;
+margin-top: 60px; /* Aumentar margen superior para separarlo del encabezado */
+margin-bottom: 60px; /* Aumentar margen inferior para separarlo del pie de página */
+padding: 20px;
+position: relative;
+min-height: 450px;
+}
+
+
+/* Encabezado del login */
+.login-header {
+    background-color: #444;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-header img {
+    height: 30px;
+    margin-right: 5px;
+}
+
+.login-header span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background-color: #f1f1f1;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group input:hover {
+    border-color: #74ebd5;
+    box-shadow: 0 0 8px rgba(116, 235, 213, 0.8);
+}
+
+.btn-submit {
+background: #444;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+font-weight: bold;
+margin-top: 10px;
+width: 100%;
+transition: background-color 0.3s ease, transform 0.3s ease; /* Añadir la transición para transform */
+font-size: 1rem;
+}
+
+.btn-submit:hover {
+background: #333;
+transform: translateY(-5px); /* Eleva el botón 5px hacia arriba */
+}
+
+
+.checkbox-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #777;
+    text-align: center;
+}
+
+/* Estilo del pie de página */
+#grisFooter {
+    position: absolute;
+    left: 0;
+    top: 76%;
+    width: 100%;
+    height: 15%;
+    background-color: #9e9e9e; /* Color gris más oscuro */
+    border-top: 2px solid #333; /* Color de la línea más oscuro */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: right; /* Cambiado a right para alinear a la derecha */
+}
+
+#grisFooter span {
+    color: #000;
+    font-family: 'gotham book';
+    font-size: 14px;
+}
+
+#grisFooter a {
+    color: #000;
+    text-decoration: none;
+}
+
+#grisFooter a:hover {
+    text-decoration: underline;
+}
+
+/* Nueva línea delgada arriba del pie de página */
+.header-logo-gob {
+height: -200px; /* Tamaño más pequeño */
+position: absolute;
+top: -50px; /* Colocado en la parte superior de la franja gris */
+right: 15px; /* Ajusta la posición horizontal desde la derecha */
+z-index: 1;
+}
+#grisFooter a {
+    color: white; /* Color inicial */
+    text-decoration: underline; /* Subrayado permanente */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Suaviza la transición de color y sombra */
+}
+
+#grisFooter a:hover {
+    color: #74ebd5; /* Color al pasar el mouse */
+    text-shadow: 0 0 8px #74ebd5, 0 0 10px #74ebd5; /* Efecto de resplandor */
+}
+#grisFooter a {
+    color: white; /* Color inicial */
+    text-decoration: underline; /* Subrayado permanente */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Suaviza la transición de color y sombra */
+}
+
+#grisFooter a:hover {
+    color: #74ebd5; /* Color al pasar el mouse */
+    text-shadow: 0 0 8px #74ebd5, 0 0 10px #74ebd5; /* Efecto de resplandor */
+}
+#grisFooter a {
+    color: white; /* Color inicial */
+    text-decoration: underline; /* Subrayado permanente */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Suaviza la transición de color y sombra */
+}
+
+#grisFooter a:hover {
+    color: #74ebd5; /* Color al pasar el mouse */
+    text-shadow: 0 0 8px #74ebd5, 0 0 10px #74ebd5; /* Efecto de resplandor */
+}
+#grisFooter a {
+    color: white; /* Color inicial */
+    text-decoration: underline; /* Subrayado permanente */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Suaviza la transición de color y sombra */
+}
+
+#grisFooter a:hover {
+    color: #74ebd5; /* Color al pasar el mouse */
+    text-shadow: 0 0 8px #74ebd5, 0 0 10px #74ebd5; /* Efecto de resplandor */
+}
+/* Estilo del botón de desplazamiento */
+.scroll-button {
+    background-color: #74ebd5; /* Color de fondo */
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 40px; /* Ajusta esta distancia para bajar el botón */
+    left: 80px; /* Mueve el botón más a la derecha */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    transition: left 0.3s ease; /* Añadir transición suave */
+}
+
+.scroll-button img {
+    width: 20px; /* Tamaño de la flecha */
+    height: 20px; /* Tamaño de la flecha */
+    transition: transform 0.3s ease; /* Añadir transición suave a la flecha */
+}
+@media (max-width: 768px) {
+    #grisFooter, #pleca, #subFooterLink, #footerLinksCenter {
+        display: none;
+    }
+}
