@@ -78,7 +78,6 @@
     <img id="arrow" src="arrow-down.png" alt="Flecha hacia abajo">
 </button> 
 <script>
-    // Deshabilitar el clic derecho
     document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
     });
@@ -100,8 +99,6 @@
         const footer = document.getElementById('pleca'); 
         const footerTop = footer.getBoundingClientRect().top; /
         const arrow = document.getElementById('arrow');
-
-        // Si el pie de página es visible, subir
         if (footerTop < window.innerHeight) {
             scrollToTop();
             arrow.src = "arrow-up.png"; 
