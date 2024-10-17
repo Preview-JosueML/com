@@ -1,4 +1,4 @@
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,6 @@ body {
     min-height: 100vh;
 }
 
-/* Encabezado con fondo blanco */
 .header {
     background-color: #ffffff;
     color: #333;
@@ -25,7 +24,6 @@ body {
     position: relative;
 }
 
-/* Franja gris con sombra para simular relieve */
 .header::before {
     content: "";
     width: 100%;
@@ -38,7 +36,6 @@ body {
     z-index: 0;
 }
 
-/* Franja roja debajo de la gris */
 .red-bar {
     width: 100%;
     height: 5px;
@@ -73,7 +70,6 @@ body {
     color: red;
 }
 
-/* Franja gris delgada con desvanecido */
 .divider {
     width: 100%;
     height: 4px;
@@ -81,7 +77,6 @@ body {
     margin: 5px 0;
 }
 
-/* Franja cian decorativa al final del encabezado */
 .cyan-bar {
     width: 100%;
     height: 5px;
@@ -91,22 +86,20 @@ body {
     left: 0;
 }
 
-/* Contenedor del formulario */
 .container {
 background-color: #f9f9f9;
 border-radius: 10px;
 box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 width: 90%;
 max-width: 320px;
-margin-top: 60px; /* Aumentar margen superior para separarlo del encabezado */
-margin-bottom: 60px; /* Aumentar margen inferior para separarlo del pie de página */
+margin-top: 60px; 
+margin-bottom: 60px; 
 padding: 20px;
 position: relative;
 min-height: 450px;
 }
 
 
-/* Encabezado del login */
 .login-header {
     background-color: #444;
     color: white;
@@ -169,13 +162,13 @@ cursor: pointer;
 font-weight: bold;
 margin-top: 10px;
 width: 100%;
-transition: background-color 0.3s ease, transform 0.3s ease; /* Añadir la transición para transform */
+transition: background-color 0.3s ease, transform 0.3s ease; 
 font-size: 1rem;
 }
 
 .btn-submit:hover {
 background: #333;
-transform: translateY(-5px); /* Eleva el botón 5px hacia arriba */
+transform: translateY(-5px); 
 }
 
 
@@ -191,18 +184,17 @@ transform: translateY(-5px); /* Eleva el botón 5px hacia arriba */
     text-align: center;
 }
 
-/* Estilo del pie de página */
 #grisFooter {
     position: absolute;
     left: 0;
     top: 76%;
     width: 100%;
     height: 15%;
-    background-color: #9e9e9e; /* Color gris más oscuro */
-    border-top: 2px solid #333; /* Color de la línea más oscuro */
+    background-color: #9e9e9e; 
+    border-top: 2px solid #333; 
     border-radius: 10px;
     padding: 20px;
-    text-align: right; /* Cambiado a right para alinear a la derecha */
+    text-align: right; 
 }
 
 #grisFooter span {
@@ -220,94 +212,91 @@ transform: translateY(-5px); /* Eleva el botón 5px hacia arriba */
     text-decoration: underline;
 }
 
-/* Nueva línea delgada arriba del pie de página */
 .header-logo-gob {
-height: -200px; /* Tamaño más pequeño */
+height: -200px; 
 position: absolute;
-top: -50px; /* Colocado en la parte superior de la franja gris */
-right: 15px; /* Ajusta la posición horizontal desde la derecha */
+top: -50px; 
+right: 15px; 
 z-index: 1;
 }
 #grisFooter a {
-    color: white; /* Color inicial */
-    text-decoration: underline; /* Subrayado permanente */
-    font-size: 16px; /* Tamaño de fuente */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Suaviza la transición de color y sombra */
+    color: white; 
+    text-decoration: underline; 
+    font-size: 16px; 
+    transition: color 0.3s ease, text-shadow 0.3s ease; 
 }
 
 #grisFooter a:hover {
-    color: #74ebd5; /* Color al pasar el mouse */
-    text-shadow: 0 0 8px #74ebd5, 0 0 10px #74ebd5; /* Efecto de resplandor */
+    color: #74ebd5; 
+    text-shadow: 0 0 8px #74ebd5, 0 0 10px #74ebd5; 
 }
 #grisFooter a {
-    color: white; /* Color inicial */
-    text-decoration: underline; /* Subrayado permanente */
-    font-size: 16px; /* Tamaño de fuente */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Suaviza la transición de color y sombra */
+    color: white; 
+    text-decoration: underline; 
+    font-size: 16px; 
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 #grisFooter a:hover {
-    color: #74ebd5; /* Color al pasar el mouse */
-    text-shadow: 0 0 8px #74ebd5, 0 0 10px #74ebd5; /* Efecto de resplandor */
+    color: #74ebd5; 
+    text-shadow: 0 0 8px #74ebd5, 0 0 10px #74ebd5; 
 }
 #grisFooter a {
-    color: white; /* Color inicial */
-    text-decoration: underline; /* Subrayado permanente */
-    font-size: 16px; /* Tamaño de fuente */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Suaviza la transición de color y sombra */
+    color: white; 
+    text-decoration: underline; 
+    font-size: 16px; 
+    transition: color 0.3s ease, text-shadow 0.3s ease; 
 }
 
 #grisFooter a:hover {
-    color: #74ebd5; /* Color al pasar el mouse */
-    text-shadow: 0 0 8px #74ebd5, 0 0 10px #74ebd5; /* Efecto de resplandor */
+    color: #74ebd5; 
+    text-shadow: 0 0 8px #74ebd5, 0 0 10px #74ebd5; 
 }
 #grisFooter a {
-    color: white; /* Color inicial */
-    text-decoration: underline; /* Subrayado permanente */
-    font-size: 16px; /* Tamaño de fuente */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Suaviza la transición de color y sombra */
+    color: white; 
+    text-decoration: underline; 
+    font-size: 16px; 
+    transition: color 0.3s ease, text-shadow 0.3s ease; 
 }
 
 #grisFooter a:hover {
-    color: #74ebd5; /* Color al pasar el mouse */
-    text-shadow: 0 0 8px #74ebd5, 0 0 10px #74ebd5; /* Efecto de resplandor */
+    color: #74ebd5; 
+    text-shadow: 0 0 8px #74ebd5, 0 0 10px #74ebd5; 
 }
-/* Estilo del botón de desplazamiento */
+
 .scroll-button {
-    background-color: #74ebd5; /* Color de fondo */
+    background-color: #74ebd5; 
     border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     position: fixed;
-    bottom: 40px; /* Ajusta esta distancia para bajar el botón */
-    left: 20px; /* Mueve el botón más a la derecha */
+    bottom: 40px; 
+    left: 20px; 
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    transition: left 0.3s ease; /* Añadir transición suave */
+    z-index: 1000; 
+    transition: left 0.3s ease; 
 }
 
 .scroll-button img {
-    width: 20px; /* Tamaño de la flecha */
-    height: 20px; /* Tamaño de la flecha */
-    transition: transform 0.3s ease; /* Añadir transición suave a la flecha */
+    width: 20px; 
+    height: 20px; 
+    transition: transform 0.3s ease; 
 }
 @media (max-width: 768px) {
     #grisFooter, #pleca, #subFooterLink, #footerLinksCenter {
         display: none;
     }
 }
-/* Evitar que el botón se subraye o tenga un borde azul en dispositivos móviles */
-.btn-submit {
-    -webkit-tap-highlight-color: transparent; /* Evita el subrayado azul en navegadores WebKit (como Chrome en Android y Safari en iOS) */
-    outline: none; /* Elimina el borde del enfoque al presionar */
-}
 
-/* También puedes eliminar la selección del texto en dispositivos móviles */
 .btn-submit {
-    user-select: none; /* Evita que el texto sea seleccionado */
+    -webkit-tap-highlight-color: transparent; 
+    outline: none; 
+}
+.btn-submit {
+    user-select: none; 
 }
